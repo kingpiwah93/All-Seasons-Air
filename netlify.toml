@@ -1,0 +1,43 @@
+# Netlify Configuration
+# Place this file in the root of your site folder
+
+[build]
+  publish = "."
+
+# Custom headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache static assets
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirect www to non-www (uncomment when custom domain is set)
+# [[redirects]]
+#   from = "https://www.allseasonsair.co.za/*"
+#   to = "https://allseasonsair.co.za/:splat"
+#   status = 301
+#   force = true
+
+# Custom 404 page
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

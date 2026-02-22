@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Seasons Air | Premium HVAC Services in Gauteng, South Africa</title>
+    <meta name="description" content="Gauteng's trusted HVAC specialists. Professional air conditioning installation, maintenance & repair for homes and businesses across Johannesburg, Pretoria & surrounds.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+/* ============================================
+   ALL SEASONS AIR – Complete Stylesheet
+   Brand: #0C52F1 | Font: Poppins
+   ============================================ */
+:root {
+    --brand: #0C52F1;
+    --brand-dark: #0940C1;
+    --brand-deeper: #072E8A;
+    --brand-light: #3D7BFF;
+    --brand-glow: rgba(12,82,241,0.18);
+    --brand-bg: rgba(12,82,241,0.04);
+    --accent: #00D4FF;
+    --accent2: #7C3AED;
+    --dark: #060E24;
+    --dark2: #0B1736;
+    --gray-900: #111827;
+    --gray-800: #1F2937;
+    --gray-700: #374151;
+    --gray-600: #6B7280;
+    --gray-500: #9CA3AF;
+    --gray-400: #D1D5DB;
+    --gray-300: #E5E7EB;
+    --gray-200: #F3F4F6;
+    --gray-100: #F9FAFB;
+    --white: #FFFFFF;
+    --whatsapp: #25D366;
+    --font: 'Poppins', sans-serif;
+    --radius: 24px;
+    --radius-lg: 32px;
+    --radius-xl: 40px;
+    --radius-2xl: 56px;
+    --radius-full: 999px;
+    --shadow-sm: 0 2px 8px rgba(12,82,241,0.06);
+    --shadow-md: 0 8px 30px rgba(12,82,241,0.08);
+    --shadow-lg: 0 16px 48px rgba(12,82,241,0.12);
+    --shadow-xl: 0 24px 64px rgba(12,82,241,0.16);
+    --shadow-glow: 0 0 60px rgba(12,82,241,0.2);
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --grad-brand: linear-gradient(135deg, #0C52F1, #3D7BFF);
+    --grad-hero: linear-gradient(135deg, #060E24 0%, #0B1736 40%, #0C52F1 100%);
+    --grad-card: linear-gradient(160deg, rgba(12,82,241,0.03), rgba(12,82,241,0.08));
+    --grad-cta: linear-gradient(135deg, #0C52F1, #072E8A);
+    --grad-mesh: radial-gradient(ellipse at 20% 50%, rgba(12,82,241,0.15) 0%, transparent 50%),
+                 radial-gradient(ellipse at 80% 20%, rgba(0,212,255,0.1) 0%, transparent 50%),
+                 radial-gradient(ellipse at 50% 80%, rgba(124,58,237,0.08) 0%, transparent 50%);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);font-size:16px;line-height:1.7;color:var(--gray-600);background:var(--white);overflow-x:hidden}
+a{text-decoration:none;color:inherit;transition:var(--transition)}
+img{max-width:100%;display:block}
+ul{list-style:none}
+.container{max-width:1280px;margin:0 auto;padding:0 28px}
+
+/* ---- HEADER ---- */
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:var(--transition)}
+.header.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 2px 32px rgba(12,82,241,0.06);padding:12px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:6px;z-index:101}
+.logo-svg{height:44px;width:auto;transition:var(--transition)}
+.nav-links{display:flex;gap:6px}
+.nav-link{padding:10px 22px;border-radius:var(--radius-full);font-size:14px;font-weight:500;color:rgba(255,255,255,0.85);transition:var(--transition);letter-spacing:0.01em}
+.header.scrolled .nav-link{color:var(--gray-700)}
+.nav-link:hover,.nav-link.active{color:var(--white);background:rgba(255,255,255,0.12)}
+.header.scrolled .nav-link:hover,.header.scrolled .nav-link.active{color:var(--brand);background:var(--brand-bg)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-phone{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.9);font-weight:600;font-size:14px}
+.header.scrolled .nav-phone{color:var(--dark)}
+
+/* ---- BUTTONS ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 32px;border-radius:var(--radius-full);font-family:var(--font);font-size:15px;font-weight:600;cursor:pointer;border:none;transition:var(--transition);white-space:nowrap;position:relative;overflow:hidden}
+.btn::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,0.15),transparent);opacity:0;transition:var(--transition)}
+.btn:hover::after{opacity:1}
+.btn-brand{background:var(--grad-brand);color:var(--white);box-shadow:0 6px 24px rgba(12,82,241,0.35)}
+.btn-brand:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(12,82,241,0.45)}
+.btn-white{background:var(--white);color:var(--brand);box-shadow:0 6px 20px rgba(0,0,0,0.1)}
+.btn-white:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,0.15)}
+.btn-glass{background:rgba(255,255,255,0.1);color:var(--white);border:1px solid rgba(255,255,255,0.2);backdrop-filter:blur(12px)}
+.btn-glass:hover{background:rgba(255,255,255,0.18);transform:translateY(-3px)}
+.btn-outline{background:transparent;color:var(--brand);border:2px solid var(--brand)}
+.btn-outline:hover{background:var(--brand);color:var(--white);transform:translateY(-3px)}
+.btn-whatsapp{background:var(--whatsapp);color:var(--white)}
+.btn-whatsapp:hover{transform:translateY(-3px);background:#1ebe5d}
+.btn-lg{padding:18px 40px;font-size:16px}
+.btn-nav{padding:10px 24px;font-size:14px}
+.btn-block{width:100%}
+
+/* ---- HAMBURGER & MOBILE ---- */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}
+.hamburger span{width:24px;height:2.5px;background:var(--white);border-radius:4px;transition:var(--transition)}
+.header.scrolled .hamburger span{background:var(--dark)}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-menu{position:fixed;inset:0;background:var(--dark);z-index:100;display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;visibility:hidden;transition:var(--transition)}
+.mobile-menu.active{opacity:1;visibility:visible}
+.mobile-nav-links{text-align:center}
+.mobile-nav-links li{margin-bottom:8px}
+.mobile-nav-links a{font-size:32px;font-weight:700;color:rgba(255,255,255,0.6);padding:8px 24px;display:inline-block;border-radius:var(--radius);transition:var(--transition)}
+.mobile-nav-links a:hover,.mobile-nav-links a.active{color:var(--white)}
+.mobile-menu-footer{margin-top:40px;display:flex;flex-direction:column;gap:12px;width:260px}
+
+/* ---- HERO ---- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:120px 0 80px}
+.hero-bg{position:absolute;inset:0;background:var(--dark)}
+.hero-bg-image{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1631545806609-22ccd4a5bf41?q=80&w=2000&auto=format') center/cover no-repeat;opacity:0.25}
+.hero-gradient{position:absolute;inset:0;background:linear-gradient(165deg,rgba(6,14,36,0.97) 0%,rgba(11,23,54,0.85) 40%,rgba(12,82,241,0.4) 100%)}
+.hero-mesh{position:absolute;inset:0;background:var(--grad-mesh)}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.3;animation:orbFloat 20s ease-in-out infinite}
+.hero-orb-1{width:500px;height:500px;background:var(--brand);top:-10%;right:-5%;animation-delay:0s}
+.hero-orb-2{width:300px;height:300px;background:var(--accent);bottom:10%;left:-5%;animation-delay:-7s}
+.hero-orb-3{width:200px;height:200px;background:var(--accent2);top:40%;right:30%;animation-delay:-14s;opacity:0.15}
+@keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-30px,40px) scale(1.1)}66%{transform:translate(20px,-30px) scale(0.95)}}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 22px;background:rgba(12,82,241,0.15);border:1px solid rgba(12,82,241,0.3);border-radius:var(--radius-full);color:var(--accent);font-size:13px;font-weight:600;margin-bottom:28px;backdrop-filter:blur(8px)}
+.hero-title{font-size:clamp(40px,5.5vw,68px);font-weight:800;line-height:1.08;color:var(--white);margin-bottom:24px;letter-spacing:-0.02em}
+.hero-title .brand-text{background:var(--grad-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-desc{font-size:17px;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:36px;max-width:520px;font-weight:300}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:52px}
+.hero-stats{display:flex;gap:40px}
+.hero-stat{text-align:left}
+.stat-number{font-size:40px;font-weight:800;color:var(--white);line-height:1;display:flex;align-items:baseline}
+.stat-number .suffix{font-size:24px;color:var(--accent);margin-left:2px}
+.stat-label{font-size:13px;color:rgba(255,255,255,0.45);margin-top:6px;font-weight:400}
+.hero-visual{position:relative}
+.hero-image-wrapper{position:relative;border-radius:var(--radius-2xl);overflow:hidden;box-shadow:var(--shadow-xl),var(--shadow-glow)}
+.hero-image-wrapper img{width:100%;height:520px;object-fit:cover;display:block}
+.hero-float-card{position:absolute;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-radius:var(--radius-lg);padding:20px 24px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:16px;animation:floatCard 4s ease-in-out infinite}
+.hero-float-card.card-1{bottom:24px;left:-40px}
+.hero-float-card.card-2{top:24px;right:-40px}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hfc-icon{width:48px;height:48px;border-radius:16px;background:var(--grad-brand);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:20px;flex-shrink:0}
+.hfc-text strong{display:block;font-size:14px;color:var(--dark)}
+.hfc-text span{font-size:12px;color:var(--gray-500)}
+
+/* ---- SCROLL INDICATOR ---- */
+.hero-scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;color:rgba(255,255,255,0.35);font-size:11px;letter-spacing:2px;text-transform:uppercase;z-index:3}
+.scroll-mouse{width:22px;height:36px;border:2px solid rgba(255,255,255,0.2);border-radius:var(--radius-full);position:relative}
+.scroll-mouse::after{content:'';width:3px;height:7px;background:var(--accent);border-radius:var(--radius-full);position:absolute;top:6px;left:50%;transform:translateX(-50%);animation:scrollPulse 2s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{top:6px;opacity:1}50%{top:18px;opacity:0.2}}
+
+/* ---- SECTION UTILITIES ---- */
+.section{padding:110px 0;position:relative}
+.section-header{text-align:center;max-width:640px;margin:0 auto 72px}
+.section-tag{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;background:var(--brand-bg);color:var(--brand);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border-radius:var(--radius-full);margin-bottom:18px;border:1px solid rgba(12,82,241,0.1)}
+.section-title{font-size:clamp(30px,4vw,46px);font-weight:800;color:var(--dark);line-height:1.15;margin-bottom:18px;letter-spacing:-0.02em}
+.text-brand{color:var(--brand)}
+.text-grad{background:var(--grad-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-desc{font-size:16px;color:var(--gray-600);line-height:1.8;font-weight:300}
+
+/* ---- SERVICES GRID ---- */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.s-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:36px 28px;transition:var(--transition);position:relative;overflow:hidden}
+.s-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad-brand);border-radius:var(--radius-xl) var(--radius-xl) 0 0;opacity:0;transition:var(--transition)}
+.s-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-xl);border-color:transparent}
+.s-card:hover::before{opacity:1}
+.s-card-img{width:100%;height:180px;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:24px}
+.s-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s var(--ease)}
+.s-card:hover .s-card-img img{transform:scale(1.08)}
+.s-card-number{position:absolute;top:20px;right:24px;font-size:56px;font-weight:900;color:var(--gray-200);line-height:1;z-index:0;transition:var(--transition)}
+.s-card:hover .s-card-number{color:rgba(12,82,241,0.08)}
+.s-card h3{font-size:20px;font-weight:700;color:var(--dark);margin-bottom:10px;position:relative}
+.s-card p{font-size:14px;line-height:1.7;color:var(--gray-600);margin-bottom:20px;position:relative}
+.s-card-link{display:inline-flex;align-items:center;gap:8px;color:var(--brand);font-weight:600;font-size:14px;position:relative}
+.s-card-link:hover{gap:12px}
+
+/* ---- WHY US ---- */
+.why-section{background:var(--gray-100);overflow:hidden}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.why-content .section-tag{margin-bottom:16px}
+.why-content .section-title{text-align:left;margin-bottom:20px}
+.why-content .section-desc{text-align:left;margin-bottom:40px}
+.features-list{display:flex;flex-direction:column;gap:28px}
+.feat{display:flex;gap:20px;align-items:flex-start}
+.feat-icon{flex-shrink:0;width:52px;height:52px;border-radius:18px;background:var(--grad-brand);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:20px;box-shadow:0 8px 24px rgba(12,82,241,0.25)}
+.feat h4{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:4px}
+.feat p{font-size:14px;color:var(--gray-600);line-height:1.65}
+
+.why-visual{position:relative}
+.why-image{width:100%;border-radius:var(--radius-2xl);overflow:hidden;box-shadow:var(--shadow-lg)}
+.why-image img{width:100%;height:520px;object-fit:cover}
+.why-badge{position:absolute;bottom:-20px;right:-20px;background:var(--white);border-radius:var(--radius-xl);padding:28px 32px;box-shadow:var(--shadow-xl);text-align:center}
+.why-badge-num{font-size:48px;font-weight:900;color:var(--brand);line-height:1}
+.why-badge-text{font-size:13px;font-weight:600;color:var(--gray-600);margin-top:4px}
+
+/* ---- BRANDS MARQUEE ---- */
+.brands-section{padding:80px 0;overflow:hidden}
+.brands-marquee{mask-image:linear-gradient(90deg,transparent,black 12%,black 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,black 12%,black 88%,transparent)}
+.brands-track{display:flex;gap:56px;animation:marquee 30s linear infinite;width:max-content}
+.brand-item{font-size:28px;font-weight:800;color:var(--gray-300);white-space:nowrap;transition:var(--transition);letter-spacing:-0.02em}
+.brand-item:hover{color:var(--brand)}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ---- TESTIMONIALS ---- */
+.testimonials-section{background:var(--gray-100)}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.test-card{background:var(--white);border-radius:var(--radius-xl);padding:40px;border:1px solid var(--gray-200);transition:var(--transition);position:relative}
+.test-card.featured{border:2px solid var(--brand);box-shadow:var(--shadow-md)}
+.test-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.test-stars{display:flex;gap:3px;margin-bottom:20px;color:#F59E0B;font-size:15px}
+.test-text{font-size:15px;line-height:1.85;color:var(--gray-700);margin-bottom:28px}
+.test-author{display:flex;align-items:center;gap:14px}
+.test-avatar{width:48px;height:48px;border-radius:var(--radius-full);overflow:hidden;flex-shrink:0;background:var(--grad-brand);display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:15px}
+.test-info strong{display:block;font-size:14px;font-weight:600;color:var(--dark)}
+.test-info span{font-size:12px;color:var(--gray-500)}
+
+/* ---- CTA ---- */
+.cta-section{position:relative;padding:120px 0;overflow:hidden}
+.cta-bg{position:absolute;inset:0;background:var(--grad-cta)}
+.cta-bg::after{content:'';position:absolute;inset:0;background:var(--grad-mesh);opacity:0.5}
+.cta-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.25}
+.cta-orb-1{width:400px;height:400px;background:var(--accent);top:-20%;right:10%}
+.cta-orb-2{width:300px;height:300px;background:var(--accent2);bottom:-10%;left:5%}
+.cta-inner{position:relative;z-index:2;text-align:center;max-width:660px;margin:0 auto}
+.cta-inner h2{font-size:clamp(34px,4.5vw,50px);font-weight:800;color:var(--white);margin-bottom:18px;letter-spacing:-0.02em}
+.cta-inner p{font-size:17px;color:rgba(255,255,255,0.7);margin-bottom:40px;line-height:1.8;font-weight:300}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ---- AREAS ---- */
+.areas-grid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.area-tag{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-full);font-size:14px;font-weight:500;color:var(--gray-700);transition:var(--transition)}
+.area-tag i{font-size:11px;color:var(--brand)}
+.area-tag:hover{background:var(--brand);color:var(--white);border-color:var(--brand);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.area-tag:hover i{color:var(--white)}
+
+/* ---- FOOTER ---- */
+.footer{background:var(--dark);color:rgba(255,255,255,0.65);position:relative;overflow:hidden}
+.footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(12,82,241,0.3),transparent)}
+.footer-top{padding:80px 0 48px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:48px}
+.footer-brand{margin-bottom:20px}
+.footer-brand .logo-svg{height:40px;filter:brightness(0) invert(1)}
+.footer p{font-size:14px;line-height:1.75;margin-bottom:24px}
+.footer-social{display:flex;gap:10px}
+.footer-social a{width:42px;height:42px;border-radius:14px;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:16px;transition:var(--transition)}
+.footer-social a:hover{background:var(--brand);color:var(--white);transform:translateY(-3px)}
+.footer h4{font-size:16px;font-weight:700;color:var(--white);margin-bottom:20px}
+.footer-links li{margin-bottom:10px}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.55);transition:var(--transition)}
+.footer-links a:hover{color:var(--accent);padding-left:4px}
+.footer-contact-item{display:flex;gap:14px;margin-bottom:16px;font-size:14px}
+.footer-contact-item i{color:var(--brand-light);margin-top:3px;font-size:14px}
+.footer-contact-item a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding:24px 0;display:flex;justify-content:space-between;align-items:center;font-size:13px}
+.footer-bottom-links{display:flex;gap:24px}
+.footer-bottom-links a:hover{color:var(--accent)}
+
+/* ---- WHATSAPP FLOAT ---- */
+.wa-float{position:fixed;bottom:28px;right:28px;width:62px;height:62px;background:var(--whatsapp);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:30px;box-shadow:0 8px 28px rgba(37,211,102,0.4);z-index:999;transition:var(--transition)}
+.wa-float:hover{transform:scale(1.12) translateY(-3px);box-shadow:0 12px 36px rgba(37,211,102,0.5)}
+
+/* ---- ANIMATIONS ---- */
+.fade-up{opacity:0;transform:translateY(32px);animation:fadeUp 0.75s var(--ease) forwards}
+.d1{animation-delay:.12s}.d2{animation-delay:.24s}.d3{animation-delay:.36s}.d4{animation-delay:.48s}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+.anim{opacity:0;transform:translateY(32px);transition:opacity 0.65s var(--ease),transform 0.65s var(--ease)}
+.anim.show{opacity:1;transform:translateY(0)}
+
+/* ---- RESPONSIVE ---- */
+@media(max-width:1024px){
+    .hero-grid{grid-template-columns:1fr;text-align:center}
+    .hero-desc{margin-left:auto;margin-right:auto}
+    .hero-actions{justify-content:center}
+    .hero-stats{justify-content:center}
+    .hero-visual{max-width:560px;margin:0 auto}
+    .hero-float-card.card-1{left:0}.hero-float-card.card-2{right:0}
+    .services-grid{grid-template-columns:repeat(2,1fr)}
+    .test-grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:1fr;gap:48px}
+    .footer-grid{grid-template-columns:repeat(2,1fr)}
+    .nav-links,.nav-phone,.btn-nav{display:none}
+    .hamburger{display:flex}
+}
+@media(max-width:768px){
+    .section{padding:80px 0}
+    .services-grid,.test-grid{grid-template-columns:1fr}
+    .hero-stats{flex-wrap:wrap;gap:28px}
+    .hero-actions{flex-direction:column;align-items:center}
+    .hero-actions .btn{width:100%;max-width:320px}
+    .cta-actions{flex-direction:column;align-items:center}
+    .cta-actions .btn{width:100%;max-width:320px}
+    .footer-grid{grid-template-columns:1fr}
+    .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+}
+@media(max-width:480px){
+    .hero-title{font-size:34px}
+    .stat-number{font-size:32px}
+    .container{padding:0 16px}
+    .hero-float-card{display:none}
+}
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="ASA_Updated_Logo.svg" alt="All Seasons Air" class="logo-svg">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="tel:+27110001234" class="nav-phone"><i class="fas fa-phone"></i> 011 000 1234</a>
+                <a href="contact.html" class="btn btn-brand btn-nav">Get a Quote</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+        <a href="tel:+27110001234" class="btn btn-brand btn-block"><i class="fas fa-phone"></i> Call Us Now</a>
+        <a href="contact.html" class="btn btn-glass btn-block">Get a Free Quote</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg">
+        <div class="hero-bg-image"></div>
+        <div class="hero-gradient"></div>
+        <div class="hero-mesh"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+    </div>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge fade-up"><i class="fas fa-shield-halved"></i> Trusted HVAC Experts in Gauteng</div>
+                <h1 class="hero-title fade-up d1">Perfect Climate,<br><span class="brand-text">Every Season.</span></h1>
+                <p class="hero-desc fade-up d2">Professional heating, ventilation & air conditioning solutions for homes and businesses across Johannesburg, Pretoria, and greater Gauteng.</p>
+                <div class="hero-actions fade-up d3">
+                    <a href="contact.html" class="btn btn-brand btn-lg"><span>Request Free Quote</span><i class="fas fa-arrow-right"></i></a>
+                    <a href="services.html" class="btn btn-glass btn-lg"><span>Our Services</span></a>
+                </div>
+                <div class="hero-stats fade-up d4">
+                    <div class="hero-stat"><div class="stat-number" data-count="14">0<span class="suffix">+</span></div><div class="stat-label">Years Experience</div></div>
+                    <div class="hero-stat"><div class="stat-number" data-count="2500">0<span class="suffix">+</span></div><div class="stat-label">Happy Clients</div></div>
+                    <div class="hero-stat"><div class="stat-number" data-count="98">0<span class="suffix">%</span></div><div class="stat-label">Satisfaction Rate</div></div>
+                </div>
+            </div>
+            <div class="hero-visual fade-up d2">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492CC74b4?q=80&w=800&auto=format" alt="HVAC technician at work" onerror="this.src='https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format'">
+                </div>
+                <div class="hero-float-card card-1">
+                    <div class="hfc-icon"><i class="fas fa-temperature-low"></i></div>
+                    <div class="hfc-text"><strong>22°C Optimal</strong><span>Smart Climate Control</span></div>
+                </div>
+                <div class="hero-float-card card-2">
+                    <div class="hfc-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="hfc-text"><strong>Same-Day Service</strong><span>Emergency Callouts</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll"><div class="scroll-mouse"></div><span>Scroll</span></div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag anim"><i class="fas fa-gear"></i> What We Do</div>
+            <h2 class="section-title anim">Complete HVAC Solutions <br><span class="text-grad">Under One Roof</span></h2>
+            <p class="section-desc anim">From installation to maintenance, we deliver end-to-end climate control services tailored to Gauteng's unique weather conditions.</p>
+        </div>
+        <div class="services-grid">
+            <div class="s-card anim">
+                <div class="s-card-img"><img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=600&auto=format" alt="Air conditioning unit"></div>
+                <div class="s-card-number">01</div>
+                <h3>Air Conditioning</h3>
+                <p>Split units, ducted systems, VRV/VRF installations. We supply, install and maintain all major brands.</p>
+                <a href="services.html" class="s-card-link"><span>Learn More</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="s-card anim">
+                <div class="s-card-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=600&auto=format" alt="Heating system"></div>
+                <div class="s-card-number">02</div>
+                <h3>Heating Systems</h3>
+                <p>Heat pumps, underfloor heating, and central heating solutions for Gauteng's cold highveld winters.</p>
+                <a href="services.html" class="s-card-link"><span>Learn More</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="s-card anim">
+                <div class="s-card-img"><img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=600&auto=format" alt="Ventilation system"></div>
+                <div class="s-card-number">03</div>
+                <h3>Ventilation</h3>
+                <p>Commercial extraction, fresh air supply systems, and ducting solutions for improved indoor air quality.</p>
+                <a href="services.html" class="s-card-link"><span>Learn More</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="s-card anim">
+                <div class="s-card-img"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format" alt="HVAC maintenance"></div>
+                <div class="s-card-number">04</div>
+                <h3>Maintenance & Repair</h3>
+                <p>Scheduled servicing, emergency repairs, and preventive maintenance to keep your systems running efficiently.</p>
+                <a href="services.html" class="s-card-link"><span>Learn More</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY US -->
+<section class="section why-section">
+    <div class="container">
+        <div class="why-grid">
+            <div class="why-content">
+                <div class="section-tag anim"><i class="fas fa-star"></i> Why Choose Us</div>
+                <h2 class="section-title anim">Gauteng's Most <span class="text-grad">Reliable HVAC</span> Partner</h2>
+                <p class="section-desc anim">We combine technical expertise with exceptional customer service. Our SAQCC-registered technicians handle projects of any scale.</p>
+                <div class="features-list">
+                    <div class="feat anim">
+                        <div class="feat-icon"><i class="fas fa-certificate"></i></div>
+                        <div><h4>Licensed & Certified</h4><p>SAQCC Gas registered, SANS 10400 compliant, and fully insured for your peace of mind.</p></div>
+                    </div>
+                    <div class="feat anim">
+                        <div class="feat-icon"><i class="fas fa-bolt"></i></div>
+                        <div><h4>Rapid Response</h4><p>Same-day emergency callouts across Gauteng. We understand when your comfort can't wait.</p></div>
+                    </div>
+                    <div class="feat anim">
+                        <div class="feat-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+                        <div><h4>Transparent Pricing</h4><p>Upfront quotes with no hidden costs. Honest, fair pricing for every job.</p></div>
+                    </div>
+                    <div class="feat anim">
+                        <div class="feat-icon"><i class="fas fa-leaf"></i></div>
+                        <div><h4>Energy Efficient</h4><p>Energy-saving solutions to reduce your electricity bills and carbon footprint.</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="why-visual anim">
+                <div class="why-image">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format" alt="HVAC professional team">
+                </div>
+                <div class="why-badge">
+                    <div class="why-badge-num">14+</div>
+                    <div class="why-badge-text">Years of<br>Excellence</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag anim">Trusted Brands</div>
+            <h2 class="section-title anim">We Work With <span class="text-grad">The Best</span></h2>
+        </div>
+    </div>
+    <div class="brands-marquee">
+        <div class="brands-track">
+            <div class="brand-item">Samsung</div><div class="brand-item">Daikin</div><div class="brand-item">Midea</div><div class="brand-item">LG</div><div class="brand-item">Carrier</div><div class="brand-item">Alliance</div><div class="brand-item">Mitsubishi</div><div class="brand-item">Trane</div>
+            <div class="brand-item">Samsung</div><div class="brand-item">Daikin</div><div class="brand-item">Midea</div><div class="brand-item">LG</div><div class="brand-item">Carrier</div><div class="brand-item">Alliance</div><div class="brand-item">Mitsubishi</div><div class="brand-item">Trane</div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag anim"><i class="fas fa-quote-left"></i> Testimonials</div>
+            <h2 class="section-title anim">What Our Clients <span class="text-grad">Say About Us</span></h2>
+        </div>
+        <div class="test-grid">
+            <div class="test-card anim">
+                <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="test-text">"All Seasons Air installed a complete VRV system in our Sandton offices. Their professionalism was outstanding. Our energy bills dropped by 30%."</p>
+                <div class="test-author"><div class="test-avatar">TM</div><div class="test-info"><strong>Thabo Mokoena</strong><span>Office Manager, Sandton</span></div></div>
+            </div>
+            <div class="test-card featured anim">
+                <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="test-text">"When our air con broke down on the hottest day of summer, they had a technician in Centurion within 2 hours. Fixed on the spot. Lifesavers!"</p>
+                <div class="test-author"><div class="test-avatar">LV</div><div class="test-info"><strong>Lisa van der Berg</strong><span>Homeowner, Centurion</span></div></div>
+            </div>
+            <div class="test-card anim">
+                <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="test-text">"We've been on their maintenance plan for 3 years. Our restaurant's extraction and aircon have never run better. Highly recommend for commercial."</p>
+                <div class="test-author"><div class="test-avatar">RN</div><div class="test-info"><strong>Raj Naidoo</strong><span>Restaurant Owner, Rosebank</span></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-bg"><div class="cta-orb cta-orb-1"></div><div class="cta-orb cta-orb-2"></div></div>
+    <div class="container">
+        <div class="cta-inner anim">
+            <h2>Ready for <span style="color:var(--accent)">Perfect Comfort?</span></h2>
+            <p>Get a free, no-obligation quote for your HVAC project. Our team is standing by to help you create the perfect indoor climate.</p>
+            <div class="cta-actions">
+                <a href="contact.html" class="btn btn-white btn-lg"><span>Get Free Quote</span><i class="fas fa-arrow-right"></i></a>
+                <a href="tel:+27110001234" class="btn btn-glass btn-lg"><i class="fas fa-phone"></i><span>011 000 1234</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AREAS -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag anim"><i class="fas fa-map-location-dot"></i> Coverage</div>
+            <h2 class="section-title anim">Serving All of <span class="text-grad">Gauteng</span></h2>
+        </div>
+        <div class="areas-grid anim">
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Johannesburg</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Pretoria</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Sandton</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Midrand</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Centurion</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Randburg</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Roodepoort</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Fourways</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Kempton Park</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Boksburg</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Benoni</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Alberton</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Soweto</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Germiston</div>
+            <div class="area-tag"><i class="fas fa-map-pin"></i> Vereeniging</div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand"><img src="ASA_Updated_Logo.svg" alt="All Seasons Air" class="logo-svg"></div>
+                    <p>Gauteng's premier HVAC service provider delivering exceptional climate control solutions for homes and businesses.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Online Store</a></li></ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links"><li><a href="services.html">Air Conditioning</a></li><li><a href="services.html">Heating Systems</a></li><li><a href="services.html">Ventilation</a></li><li><a href="services.html">Maintenance</a></li><li><a href="services.html">Emergency Repairs</a></li></ul>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>123 Business Park Drive,<br>Midrand, Gauteng, 1685</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+27110001234">011 000 1234</a></div>
+                    <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@allseasonsair.co.za">info@allseasonsair.co.za</a></div>
+                    <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon-Fri: 07:00 - 17:00<br>Sat: 08:00 - 13:00</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 All Seasons Air. All rights reserved.</p>
+            <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+        </div>
+    </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/27110001234" class="wa-float" aria-label="Chat on WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+    // Header scroll
+    const h=document.getElementById('header');
+    const onScroll=()=>{h.classList.toggle('scrolled',window.scrollY>60)};
+    window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+    // Mobile menu
+    const hb=document.getElementById('hamburger'),mm=document.getElementById('mobileMenu');
+    if(hb&&mm){hb.addEventListener('click',()=>{hb.classList.toggle('active');mm.classList.toggle('active');document.body.style.overflow=mm.classList.contains('active')?'hidden':''});mm.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{hb.classList.remove('active');mm.classList.remove('active');document.body.style.overflow=''}))}
+
+    // Scroll animations
+    const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){const d=el.target.dataset.delay||0;setTimeout(()=>el.target.classList.add('show'),+d);obs.unobserve(el.target)}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
+
+    // Counter animation
+    const cObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const el=en.target,t=+el.dataset.count,dur=2000,st=performance.now();const ani=now=>{const p=Math.min((now-st)/dur,1),v=Math.floor((1-Math.pow(1-p,3))*t);el.childNodes[0].textContent=v.toLocaleString();if(p<1)requestAnimationFrame(ani);else el.childNodes[0].textContent=t.toLocaleString()};requestAnimationFrame(ani);cObs.unobserve(el)}})},{threshold:0.5});
+    document.querySelectorAll('.stat-number[data-count]').forEach(c=>cObs.observe(c));
+});
+</script>
+</body>
+</html>
